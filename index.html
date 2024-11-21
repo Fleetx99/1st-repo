@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makeup Haven - Order Your Favorite Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Include the same CSS as before */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #ff6f61;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700; /* Gold color on hover */
+        }
+
+        #hero {
+            background: linear-gradient(to right, #ff6f61, #ff9a8b);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #ffd700; /* Gold color */
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff6f61; /* Change to primary color on hover */
+            color: white;
+        }
+
+        #products {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff3e0; /* Light peach background */
+        }
+
+        #products h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background: #fff; /* White background for products */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .product h3 {
+            margin: 15px 0;
+            font-size: 1.5em;
+        }
+
+        .product .price {
+            font-size: 1.2em;
+            color: #ff6f61; /* Price color */
+        }
+
+        .product button {
+            background: #ff6f61;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .product button:hover {
+            background: #e55b50; /* Darker shade on hover */
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0 .1);
+        }
+
+        #about {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #e0f7fa; /* Light cyan background */
+        }
+
+        #about h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .socials {
+            margin-top: 10px;
+        }
+
+        .socials a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: #ffd700; /* Gold color on hover */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5em;
+            }
+
+            #hero p {
+                font-size: 1em;
+            }
+
+            .btn {
+                font-size: 1.2em;
+            }
+
+            .product h3 {
+                font-size: 1.2em;
+            }
+
+            .product .price {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Makeup Haven</div>
+            <nav>
+                <ul>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1>Discover Your Beauty</h1>
+            <p>Shop the latest makeup trends and find your perfect look!</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </section>
+
+        <section id="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <a href="foundation.html">
+                        <img src="f.jpg" alt="Foundation" style="width: 150px; height:auto;">
+                        <h3>Foundation</h3>
+                        <p class="price">₹2,489</p>
+                        <button class="add-to-cart" data-product="Foundation">Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="lipstick.html">
+                        <img src="l.jpg" alt="Lipstick" style="width: 150px; height:auto;">
+                        <h3>Lipstick</h3>
+                        <p class="price">₹1,659</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="eyeshadow.html">
+                        <img src="e.jpg" alt="Eyeshadow Palette" style="width: 150px; height:auto;">
+                        <h3>Eyeshadow Palette</h3>
+                        <p class="price">₹2,899</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="mascara.html">
+                        <img src="m.jpeg" alt="Mascara" style="width: 150px;height:auto;">
+                        <h3>Mascara</h3>
+                        <p class="price">₹2,079</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="blush.html">
+                        <img src="n.jpeg" alt="Blush" style="width: 150px; height:auto;">
+                        <h3>Blush</h3>
+                        <p class="price">₹1,579</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="highlighter.html">
+                        <img src="mac.jpg" alt="Highlighter" style="width: 150px; height:auto;">
+                        <h3>Highlighter</h3>
+                        <p class="price">₹1,915</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="setting.html">
+                        <img src="urban.jpg" alt="Setting Spray" style="width: 150px; height:auto;">
+                        <h3>Setting Spray</h3>
+                        <p class="price">₹1,329</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="remover.html">
+                        <img src="remover.jpg" alt="Makeup Remover" style="width: 150px; height:auto;">
+                        <h3>Makeup Remover</h3>
+                        <p class="price">₹1,079</p>
+                        <button>Add to Cart</button>
+                    </a>
+                </div>
+            </div>
+            <div class="cart-icon">
+                <span id="cart-count">0</span> items in cart
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At Makeup Haven, we believe in empowering individuals through beauty. Our products are carefully curated to ensure quality and satisfaction.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Makeup Haven. All rights reserved.</p>
+            <div class="socials">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
